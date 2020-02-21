@@ -9,7 +9,7 @@ Now we have to make sure that any other dependencies are installed:
 
 `sudo apt install exif`
 
-## Starting the server
-We can now start the server by running:
+## Starting the tool
+We can now start the utility by running:
 
-`./server.py`
+`./tampr.py`
