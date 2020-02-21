@@ -5,6 +5,7 @@ import importlib
 
 commands = {}
 
+# import all addons and keep references to the modules
 for file in os.listdir("addons"):
     if file.endswith(".py"):
         commandName = file.replace('.py', '')
@@ -15,6 +16,6 @@ for file in os.listdir("addons"):
         except:
             print("unable to import")
 
-requestedCommand = sys.argv[1]
 # call the main method of the requested module
+requestedCommand = sys.argv[1]
 commands[requestedCommand].main(sys.argv)
