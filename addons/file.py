@@ -18,5 +18,8 @@ def main(args):
                 print(output.strip())
             break
 
+def short_desc():
+    print("  file - view/edit some data of standard files")
+
 def help():
     print("help menu")

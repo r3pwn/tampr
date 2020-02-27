@@ -18,5 +18,8 @@ def main(args):
                 print(output.strip())
             break
 
+def short_desc():
+    print("  exif - view/edit the exif data of images")
+
 def help():
     print("please help")

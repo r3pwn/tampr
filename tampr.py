@@ -16,6 +16,15 @@ for file in os.listdir("addons"):
         except:
             print("unable to import")
 
-# call the main method of the requested module
-requestedCommand = sys.argv[1]
-commands[requestedCommand].main(sys.argv)
+def main():
+    # call the main method of the requested module
+    try:
+        if len(sys.argv) < 2:
+            commands["help"].main([])
+            return
+        requestedCommand = sys.argv[1]
+        commands[requestedCommand].main(sys.argv)
+    except:
+        commands["help"].main([])
+
+main()
