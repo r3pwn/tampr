@@ -14,7 +14,7 @@ for file in os.listdir("addons"):
             module = importlib.import_module(moduleName)
             commands[commandName] = module
         except:
-            print("unable to import")
+            print("unable to import " + commandName)
 
 def main():
     # call the main method of the requested module

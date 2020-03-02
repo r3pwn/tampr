@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 import subprocess
+import sys
+import argparse
+
+parser = argparse.ArgumentParser(prog='{} exif'.format(sys.argv[0]), 
+            description='view/edit the exif data of images', add_help=False)
 
 def main(args):
     # tool exif 'filename'
@@ -19,7 +24,7 @@ def main(args):
             break
 
 def short_desc():
-    print("  exif - view/edit the exif data of images")
+    print("  exif - " + parser.description)
 
 def help():
-    print("please help")
+    parser.print_help()

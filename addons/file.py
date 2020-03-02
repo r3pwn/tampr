@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 import subprocess
+import sys
+import argparse
+
+parser = argparse.ArgumentParser(prog='{} file'.format(sys.argv[0]), 
+            description='view/edit some data of standard files', add_help=False)
 
 def main(args):
     # tool file 'filename'
@@ -19,7 +24,7 @@ def main(args):
             break
 
 def short_desc():
-    print("  file - view/edit some data of standard files")
+    print("  file - " + parser.description)
 
 def help():
-    print("help menu")
+    parser.print_help()
