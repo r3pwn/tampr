@@ -3,7 +3,9 @@
 ## EXIF Metadata Viewing
 
 For this, we want to use the 'exif' module. Let's try viewing the metadata of "sample3.jpg"
-`./tampr.py exif 'samples/exif/sample3.jpg'`
+
+`./tampr.py exif 'samples/exif/sample1.jpg'`
+
 This should print out something similar to:
 ```
 $ ./tampr.py exif 'samples/exif/sample1.jpg'
@@ -27,8 +29,11 @@ Section: 0th
 
 ## EXIF Metadata Editing
 For this, we want to use the 'exif' module. Let's try editing the metadata of "sample3.jpg"
+
 First, we want to see what some of the metadata keys are, so let's run
+
 `./tampr.py exif 'samples/exif/sample3.jpg'`
+
 This should print out something similar to:
 ```
 $ ./tampr.py exif 'samples/exif/sample3.jpg'
