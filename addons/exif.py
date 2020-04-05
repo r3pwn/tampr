@@ -25,7 +25,8 @@ def main(args):
         for metadatatype in metadatatypes:
             print("Section:", metadatatype)
             for key, val in exif_dict[metadatatype].items():
-                if key in ExifTags.TAGS:
+                # MakerNote contains a large binary string, seemingly of garbage
+                if key in ExifTags.TAGS and ExifTags.TAGS[key] is not "MakerNote":
                     print(f"  {ExifTags.TAGS[key]}: {repr(val)}")
             print("----------------------------------------")
     else:
