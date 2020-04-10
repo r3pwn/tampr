@@ -6,7 +6,7 @@ import hashlib
 # parser help for viewing hashes
 parser = argparse.ArgumentParser(prog='{} hash'.format(sys.argv[0]),
                     description='view different hashes of a file', add_help=False)
-parser.add_argument('string', metavar='image', type=str, help='the path to a file')\
+parser.add_argument('string', metavar='filename', type=str, help='the path to a file')\
 
 # We use a chunk size of 128kb as to not use too much ram
 CHUNK_SIZE = 128 * 1024
