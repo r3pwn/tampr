@@ -3,12 +3,15 @@ import subprocess
 import sys
 import argparse
 
-parser = argparse.ArgumentParser(prog='{} file'.format(sys.argv[0]), 
-            description='view/edit some data of standard files', add_help=False)
+parser = argparse.ArgumentParser(prog='{} stat'.format(sys.argv[0]), 
+            description='view some data of standard files', add_help=False)
 
 def main(args):
+    stat_file(args[2])
+
+def stat_file(filename):
     # tool file 'filename'
-    process = subprocess.Popen(['stat', args[2]], 
+    process = subprocess.Popen(['stat', filename], 
                            stdout=subprocess.PIPE,
                            universal_newlines=True)
 
@@ -24,7 +27,7 @@ def main(args):
             break
 
 def short_desc():
-    print("  file - " + parser.description)
+    print("  stat - " + parser.description)
 
 def help():
     parser.print_help()
